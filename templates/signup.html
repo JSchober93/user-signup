@@ -8,8 +8,8 @@
         </style>
     </head>
     <body>
-        <h2>Create your account here></h2>
-        <form method='post'> == $0
+        <h2>Create your account here</h2>
+        <form method='post' name='signup' action='/signup'>
             <table>
                 <tbody>
                     <tr>
@@ -17,8 +17,8 @@
                             <label for='username'>Username</label>
                         </td>
                         <td>
-                            <input name='username' type='text' value>
-                            <span class='error'></span>                            
+                            <input name='username' type='text' value={{username}}>
+                            <span class='error'>{{user_error}}</span>                            
                         </td>
                     </tr>
                     <tr>
@@ -27,7 +27,7 @@
                         </td>
                         <td>
                             <input name='password' type='password'>
-                            <span class='error'></span>
+                            <span class='error'>{{password_error}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -35,8 +35,8 @@
                             <label for='verify' type='password'>Verify Password</label>
                         </td>
                         <td>
-                            <input name='verify' type='password'>
-                            <span class='error'></span>
+                            <input name='verify_pass' type='password'>
+                            <span class='error'>{{verify_error}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -44,8 +44,8 @@
                             <label for='email' type='text'>Email(optional)</label>
                         </td>
                         <td>
-                            <input name='email' value>
-                            <span class='error'></span>
+                            <input name='email' value={{email}}>
+                            <span class='error'>{{email_error}}</span>
                         </td>
                     </tr>
                 </tbody>
