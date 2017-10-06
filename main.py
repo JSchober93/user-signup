@@ -5,7 +5,7 @@ app.config['DEBUG'] = True
 
 
 
-@app.route("/signup", methods=['post','get'])
+@app.route("/", methods=['post'])
 def submit():
     username = request.form['username']
     password = request.form['password']
